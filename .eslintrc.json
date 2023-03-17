@@ -6,7 +6,6 @@
 		"es2021": true
 	},
 	"parser": "@typescript-eslint/parser",
-	//	"plugins": ["react-prefer-function-component"],
 	"extends": [
 		"eslint:all",
 		"plugin:@typescript-eslint/all",
@@ -76,7 +75,7 @@
 		"@typescript-eslint/member-ordering": "off",
 		"@typescript-eslint/prefer-includes": "off",
 		"@typescript-eslint/no-restricted-imports": "off",
-
+		"@typescript-eslint/consistent-type-imports": "off",
 		"import/no-deprecated": "error",
 		"import/order": "off",
 		"import/no-extraneous-dependencies": [
@@ -92,7 +91,6 @@
 				]
 			}
 		],
-
 		"react/no-did-update-set-state": "off",
 		"react/no-find-dom-node": "off",
 		"react/no-is-mounted": "off",
@@ -108,7 +106,8 @@
 		"react/sort-comp": "off",
 		"react/state-in-constructor": "off",
 		"react/static-property-placement": "off",
-
+		"react/jsx-props-no-spreading": "off",
+		"react/function-component-definition": "off",
 		"react/boolean-prop-naming": [
 			"error",
 			{
@@ -125,7 +124,7 @@
 				"checkInlineFunction": true
 			}
 		],
-		"react/jsx-key": "error",
+
 		"react/jsx-no-bind": [
 			"error",
 			{

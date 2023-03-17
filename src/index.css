@@ -25,3 +25,51 @@
 		src: url('/fonts/Inter-Bold.woff2') format('woff2');
 	}
 }
+
+@media screen and (max-width: 600px) {
+	.responsive thead {
+		visibility: hidden;
+		height: 0;
+		position: absolute;
+	}
+
+	.responsive tr {
+		display: block;
+		margin-bottom: .625em;
+	}
+
+	.responsive td {
+		/*border: 1px solid;*/
+		border-bottom: none;
+		display: block;
+		font-size: .8em;
+		text-align: right;
+	}
+
+	.responsive td::before {
+		content: attr(data-label);
+		float: left;
+		font-weight: bold;
+		text-transform: uppercase;
+	}
+
+	.responsive td:last-child {
+		border-bottom: 1px solid;
+	}
+}
+
+.resizer {
+	display: inline-block;
+	background: blue;
+	width: 10px;
+	height: 100%;
+	position: absolute;
+	right: 0;
+	top: 0;
+	transform: translateX(50%);
+	z-index: 1;
+}
+
+.resizer.is-resizing {
+	background: red;
+}
